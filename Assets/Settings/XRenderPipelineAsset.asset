@@ -18,8 +18,8 @@ MonoBehaviour:
   transparentLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  requireOpaqueTexture: 0
-  requireDepthTexture: 0
+  requireOpaqueTexture: 1
+  requireDepthTexture: 1
   opaqueDownsampling: 1
   useHDR: 0
   msaaQuality: 1
@@ -30,7 +30,7 @@ MonoBehaviour:
   shadowmapResolution: 1024
   shadowDepthBias: 1
   shadowNormalBias: 1
-  shadowCascadesOption: 0
+  shadowCascadesOption: 2
   cascades2Split: 0.25
   cascades4Split: {x: 0.067, y: 0.2, z: 0.467}
   usePostProcess: 0
