@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adc162c14373c47498fb95197c7b8da5, type: 3}
+  m_Name: XRenderPipelineAsset
+  m_EditorClassIdentifier: 
+  opaqueLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  transparentLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  requireOpaqueTexture: 0
+  requireDepthTexture: 0
+  opaqueDownsampling: 1
+  useHDR: 0
+  msaaQuality: 1
+  renderScale: 1
+  supportMainLightShadow: 1
+  supportSoftShadow: 1
+  shadowDistance: 50
+  shadowmapResolution: 1024
+  shadowDepthBias: 1
+  shadowNormalBias: 1
+  shadowCascadesOption: 0
+  cascades2Split: 0.25
+  cascades4Split: {x: 0.067, y: 0.2, z: 0.467}
+  usePostProcess: 0
+  colorGradingMode: 0
+  colorGradingLutSize: 32
+  useSRPBatcher: 1
+  useDynamicBatching: 0
+  supportMixedLighting: 1
+  disableAdditionalLights: 0
+  useClusterLighting: 0
+  overrideCameraSettings:
+    enabled: 0
+    opaqueLayerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    transparentLayerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+    fieldOfView: 60
+    nearClipPlane: 0.01
+    farClipPlane: 50
+  enablePipelineDebug: 0
+  materialDebugMode: 0
+  wireframeMode: 0
+  wireframeColor: {r: 0, g: 0, b: 0, a: 1}
+  wireframeOverrideColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  validateMaterialPureMetal: 0
+  validateMaterialPureMetalColor: {r: 1, g: 0, b: 1, a: 1}
+  validateMaterialHighColor: {r: 1, g: 0, b: 0, a: 1}
+  validateMaterialLowColor: {r: 0, g: 1, b: 1, a: 1}
+  showDirectSpecular: 1
+  showIndirectSpecular: 1
+  showDirectDiffuse: 1
+  showIndirectDiffuse: 1
+  shaders:
+    blit: {fileID: 4800000, guid: 4c184a11384957848ae9a8f32a1abc5e, type: 3}
+    copyColor: {fileID: 4800000, guid: 3fb0c350c5b97d54cbac8323e57300b0, type: 3}
+    copyDepth: {fileID: 4800000, guid: dce206a9eff79154fa0cbd839801d500, type: 3}
+    lutBuilderLdr: {fileID: 4800000, guid: 5ce21bc6faa0ef54faa0bb06233f58d6, type: 3}
+    lutBuilderHdr: {fileID: 4800000, guid: faa8a8238a19f374c8b6b14e3329324e, type: 3}
+    onChipCompatibleUberPostProcess: {fileID: 4800000, guid: 7b30c7b4636161a42aae49573dab5afa, type: 3}
+    uberPostProcess: {fileID: 4800000, guid: 4d0560ce033ea884a8c8fdc9a02c5821, type: 3}
+    bloom: {fileID: 4800000, guid: 863a1b9f4adbaa34cb60fb866789db2a, type: 3}
+    cluster: {fileID: 7200000, guid: 91fbbf481b95827419b0db3aaaec2b81, type: 3}
+    lightCulling: {fileID: 7200000, guid: 353f77d7fd6366544aa25f45908bc705, type: 3}
+    fallbackError: {fileID: 4800000, guid: 1e842ee559a406840ae2576e57bccd07, type: 3}
+  materials:
+    lit: {fileID: 2100000, guid: 507ada6d96e0a9645bba8f1df4377d35, type: 2}
+    particleUnlit: {fileID: 2100000, guid: 68ac728eb9910a746ad377421291c783, type: 2}
+    uiDefault: {fileID: 2100000, guid: 71740f479f5c0f1479eb35f21e6794ac, type: 2}
+    wireframe: {fileID: 2100000, guid: 3cf9d181523de174b841d43861060aca, type: 2}
+  textures:
+    blueNoise16LTex:
+    - {fileID: 2800000, guid: 81200413a40918d4d8702e94db29911c, type: 3}
+    - {fileID: 2800000, guid: d50c5e07c9911a74982bddf7f3075e7b, type: 3}
+    - {fileID: 2800000, guid: 1134690bf9216164dbc75050e35b7900, type: 3}
+    - {fileID: 2800000, guid: 7ce2118f74614a94aa8a0cdf2e6062c3, type: 3}
+    - {fileID: 2800000, guid: 2ca97df9d1801e84a8a8f2c53cb744f0, type: 3}
+    - {fileID: 2800000, guid: e63eef8f54aa9dc4da9a5ac094b503b5, type: 3}
+    - {fileID: 2800000, guid: 39451254daebd6d40b52899c1f1c0c1b, type: 3}
+    - {fileID: 2800000, guid: c94ad916058dff743b0f1c969ddbe660, type: 3}
+    - {fileID: 2800000, guid: ed5ea7ce59ca8ec4f9f14bf470a30f35, type: 3}
+    - {fileID: 2800000, guid: 071e954febf155243a6c81e48f452644, type: 3}
+    - {fileID: 2800000, guid: 96aaab9cc247d0b4c98132159688c1af, type: 3}
+    - {fileID: 2800000, guid: fc3fa8f108657e14486697c9a84ccfc5, type: 3}
+    - {fileID: 2800000, guid: bfed3e498947fcb4890b7f40f54d85b9, type: 3}
+    - {fileID: 2800000, guid: d512512f4af60a442ab3458489412954, type: 3}
+    - {fileID: 2800000, guid: 47a45908f6db0cb44a0d5e961143afec, type: 3}
+    - {fileID: 2800000, guid: 4dcc0502f8586f941b5c4a66717205e8, type: 3}
+    - {fileID: 2800000, guid: 9d92991794bb5864c8085468b97aa067, type: 3}
+    - {fileID: 2800000, guid: 14381521ff11cb74abe3fe65401c23be, type: 3}
+    - {fileID: 2800000, guid: d36f0fe53425e08499a2333cf423634c, type: 3}
+    - {fileID: 2800000, guid: d4044ea2490d63b43aa1765f8efbf8a9, type: 3}
+    - {fileID: 2800000, guid: c9bd74624d8070f429e3f46d161f9204, type: 3}
+    - {fileID: 2800000, guid: d5c9b274310e5524ebe32a4e4da3df1f, type: 3}
+    - {fileID: 2800000, guid: f69770e54f2823f43badf77916acad83, type: 3}
+    - {fileID: 2800000, guid: 10b6c6d22e73dea46a8ab36b6eebd629, type: 3}
+    - {fileID: 2800000, guid: a2ec5cbf5a9b64345ad3fab0912ddf7b, type: 3}
+    - {fileID: 2800000, guid: 1c3c6d69a645b804fa232004b96b7ad3, type: 3}
+    - {fileID: 2800000, guid: d18a24d7b4ed50f4387993566d9d3ae2, type: 3}
+    - {fileID: 2800000, guid: c989e1ed85cf7154caa922fec53e6af6, type: 3}
+    - {fileID: 2800000, guid: ff47e5a0f105eb34883b973e51f4db62, type: 3}
+    - {fileID: 2800000, guid: fa042edbfc40fbd4bad0ab9d505b1223, type: 3}
+    - {fileID: 2800000, guid: 896d9004736809c4fb5973b7c12eb8b9, type: 3}
+    - {fileID: 2800000, guid: 179f794063d2a66478e6e726f84a65bc, type: 3}
+    filmGrainTex:
+    - {fileID: 2800000, guid: 654c582f7f8a5a14dbd7d119cbde215d, type: 3}
+    - {fileID: 2800000, guid: dd77ffd079630404e879388999033049, type: 3}
+    - {fileID: 2800000, guid: 1097e90e1306e26439701489f391a6c0, type: 3}
+    - {fileID: 2800000, guid: f0b67500f7fad3b4c9f2b13e8f41ba6e, type: 3}
+    - {fileID: 2800000, guid: 9930fb4528622b34687b00bbe6883de7, type: 3}
+    - {fileID: 2800000, guid: bd9e8c758250ef449a4b4bfaad7a2133, type: 3}
+    - {fileID: 2800000, guid: 510a2f57334933e4a8dbabe4c30204e4, type: 3}
+    - {fileID: 2800000, guid: b4db8180660810945bf8d55ab44352ad, type: 3}
+    - {fileID: 2800000, guid: fd2fd78b392986e42a12df2177d3b89c, type: 3}
+    - {fileID: 2800000, guid: 5cdee82a77d13994f83b8fdabed7c301, type: 3}
