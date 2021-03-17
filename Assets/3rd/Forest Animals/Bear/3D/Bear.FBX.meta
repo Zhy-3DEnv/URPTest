@@ -1,0 +1,925 @@
+fileFormatVersion: 2
+guid: de9f2ff07abc69b4799588404d2e26be
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: Bear Mesh
+  - first:
+      1: 100004
+    second: Eye Left
+  - first:
+      1: 100006
+    second: Eye Right
+  - first:
+      1: 100008
+    second: Bear
+  - first:
+      1: 100010
+    second: Bear Head
+  - first:
+      1: 100012
+    second: Bear Jaw
+  - first:
+      1: 100014
+    second: Bear L Calf
+  - first:
+      1: 100016
+    second: Bear L Clavicle
+  - first:
+      1: 100018
+    second: Bear L Ear
+  - first:
+      1: 100020
+    second: Bear L Eyebrow
+  - first:
+      1: 100022
+    second: Bear L Finger0
+  - first:
+      1: 100024
+    second: Bear L Finger1
+  - first:
+      1: 100026
+    second: Bear L Foot
+  - first:
+      1: 100028
+    second: Bear L Forearm
+  - first:
+      1: 100030
+    second: Bear L Hand
+  - first:
+      1: 100032
+    second: Bear L Lower Eyelid
+  - first:
+      1: 100034
+    second: Bear L Lower Mouth
+  - first:
+      1: 100036
+    second: Bear L Mouth
+  - first:
+      1: 100038
+    second: Bear L Thigh
+  - first:
+      1: 100040
+    second: Bear L Toe0
+  - first:
+      1: 100042
+    second: Bear L Upper Eyelid
+  - first:
+      1: 100044
+    second: Bear L Upper Mouth
+  - first:
+      1: 100046
+    second: Bear L UpperArm
+  - first:
+      1: 100048
+    second: Bear Neck
+  - first:
+      1: 100050
+    second: Bear Nose
+  - first:
+      1: 100052
+    second: Bear Pelvis
+  - first:
+      1: 100054
+    second: Bear R Calf
+  - first:
+      1: 100056
+    second: Bear R Clavicle
+  - first:
+      1: 100058
+    second: Bear R Ear
+  - first:
+      1: 100060
+    second: Bear R Eyebrow
+  - first:
+      1: 100062
+    second: Bear R Finger0
+  - first:
+      1: 100064
+    second: Bear R Finger1
+  - first:
+      1: 100066
+    second: Bear R Foot
+  - first:
+      1: 100068
+    second: Bear R Forearm
+  - first:
+      1: 100070
+    second: Bear R Hand
+  - first:
+      1: 100072
+    second: Bear R Lower Eyelid
+  - first:
+      1: 100074
+    second: Bear R Lower Mouth
+  - first:
+      1: 100076
+    second: Bear R Mouth
+  - first:
+      1: 100078
+    second: Bear R Thigh
+  - first:
+      1: 100080
+    second: Bear R Toe0
+  - first:
+      1: 100082
+    second: Bear R Upper Eyelid
+  - first:
+      1: 100084
+    second: Bear R Upper Mouth
+  - first:
+      1: 100086
+    second: Bear R UpperArm
+  - first:
+      1: 100088
+    second: Bear Spine
+  - first:
+      1: 100090
+    second: Bear Spine1
+  - first:
+      1: 100092
+    second: Bear Spine2
+  - first:
+      1: 100094
+    second: Bear Tail
+  - first:
+      1: 100096
+    second: Bear Tongue
+  - first:
+      1: 100098
+    second: Bear Tongue02
+  - first:
+      1: 100100
+    second: Bear Tongue03
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: Bear Mesh
+  - first:
+      4: 400004
+    second: Eye Left
+  - first:
+      4: 400006
+    second: Eye Right
+  - first:
+      4: 400008
+    second: Bear
+  - first:
+      4: 400010
+    second: Bear Head
+  - first:
+      4: 400012
+    second: Bear Jaw
+  - first:
+      4: 400014
+    second: Bear L Calf
+  - first:
+      4: 400016
+    second: Bear L Clavicle
+  - first:
+      4: 400018
+    second: Bear L Ear
+  - first:
+      4: 400020
+    second: Bear L Eyebrow
+  - first:
+      4: 400022
+    second: Bear L Finger0
+  - first:
+      4: 400024
+    second: Bear L Finger1
+  - first:
+      4: 400026
+    second: Bear L Foot
+  - first:
+      4: 400028
+    second: Bear L Forearm
+  - first:
+      4: 400030
+    second: Bear L Hand
+  - first:
+      4: 400032
+    second: Bear L Lower Eyelid
+  - first:
+      4: 400034
+    second: Bear L Lower Mouth
+  - first:
+      4: 400036
+    second: Bear L Mouth
+  - first:
+      4: 400038
+    second: Bear L Thigh
+  - first:
+      4: 400040
+    second: Bear L Toe0
+  - first:
+      4: 400042
+    second: Bear L Upper Eyelid
+  - first:
+      4: 400044
+    second: Bear L Upper Mouth
+  - first:
+      4: 400046
+    second: Bear L UpperArm
+  - first:
+      4: 400048
+    second: Bear Neck
+  - first:
+      4: 400050
+    second: Bear Nose
+  - first:
+      4: 400052
+    second: Bear Pelvis
+  - first:
+      4: 400054
+    second: Bear R Calf
+  - first:
+      4: 400056
+    second: Bear R Clavicle
+  - first:
+      4: 400058
+    second: Bear R Ear
+  - first:
+      4: 400060
+    second: Bear R Eyebrow
+  - first:
+      4: 400062
+    second: Bear R Finger0
+  - first:
+      4: 400064
+    second: Bear R Finger1
+  - first:
+      4: 400066
+    second: Bear R Foot
+  - first:
+      4: 400068
+    second: Bear R Forearm
+  - first:
+      4: 400070
+    second: Bear R Hand
+  - first:
+      4: 400072
+    second: Bear R Lower Eyelid
+  - first:
+      4: 400074
+    second: Bear R Lower Mouth
+  - first:
+      4: 400076
+    second: Bear R Mouth
+  - first:
+      4: 400078
+    second: Bear R Thigh
+  - first:
+      4: 400080
+    second: Bear R Toe0
+  - first:
+      4: 400082
+    second: Bear R Upper Eyelid
+  - first:
+      4: 400084
+    second: Bear R Upper Mouth
+  - first:
+      4: 400086
+    second: Bear R UpperArm
+  - first:
+      4: 400088
+    second: Bear Spine
+  - first:
+      4: 400090
+    second: Bear Spine1
+  - first:
+      4: 400092
+    second: Bear Spine2
+  - first:
+      4: 400094
+    second: Bear Tail
+  - first:
+      4: 400096
+    second: Bear Tongue
+  - first:
+      4: 400098
+    second: Bear Tongue02
+  - first:
+      4: 400100
+    second: Bear Tongue03
+  - first:
+      21: 2100000
+    second: Bear
+  - first:
+      23: 2300000
+    second: //RootNode
+  - first:
+      23: 2300002
+    second: Bear Mesh
+  - first:
+      23: 2300004
+    second: Eye Left
+  - first:
+      23: 2300006
+    second: Eye Right
+  - first:
+      33: 3300000
+    second: //RootNode
+  - first:
+      33: 3300002
+    second: Bear Mesh
+  - first:
+      33: 3300004
+    second: Eye Left
+  - first:
+      33: 3300006
+    second: Eye Right
+  - first:
+      43: 4300000
+    second: Bear Mesh
+  - first:
+      43: 4300002
+    second: Eye Right
+  - first:
+      43: 4300004
+    second: Eye Left
+  - first:
+      74: 7400000
+    second: Take 001
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Bear Mesh
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bear
+    second: {fileID: 2100000, guid: 2f8f5a61abf9ba449bc649f8caa5b4da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eye Shine
+    second: {fileID: 2100000, guid: d7cccf910be6d2145a7dfe22a08948d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eyes
+    second: {fileID: 2100000, guid: 90fe3e91f4b965c42bac69800a96fb0e, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 0
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Bear Pelvis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear L Thigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear R Thigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear L Calf
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear R Calf
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear L Foot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear R Foot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear L Clavicle
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear R Clavicle
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear L UpperArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear R UpperArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear L Forearm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear R Forearm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear L Hand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear R Hand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear L Toe0
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear R Toe0
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear L Finger0
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear L Finger1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear R Finger0
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear R Finger1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bear Spine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Bear(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0.00000043747812, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bear
+      parentName: Bear(Clone)
+      position: {x: 2.1634189e-10, y: 0.49052042, z: -0.000000021711044}
+      rotation: {x: -0.50000036, y: 0.49999967, z: 0.49999967, w: 0.50000036}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: Bear Pelvis
+      parentName: Bear
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.5, y: -0.5, z: -0.5, w: -0.5}
+      scale: {x: 1.0000004, y: 1, z: 1.0000004}
+    - name: Bear Spine
+      parentName: Bear Pelvis
+      position: {x: -0.1013755, y: -0.00024642042, z: 0.00000014092933}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999996, y: 1, z: 0.9999996}
+    - name: Bear Spine1
+      parentName: Bear Spine
+      position: {x: -0.30950558, y: -0.00024636395, z: -6.832047e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000008, y: 1.0000008, z: 1.0000007}
+    - name: Bear Spine2
+      parentName: Bear Spine1
+      position: {x: -0.30953223, y: -0.00024424074, z: -6.7878314e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1}
+    - name: Bear L Clavicle
+      parentName: Bear Spine2
+      position: {x: -0.21267074, y: -0.000776844, z: 0.062495112}
+      rotation: {x: 0.7071068, y: -0.000000030908623, z: -0.7071068, w: 0.000000030908623}
+      scale: {x: 0.99999964, y: 1.0000001, z: 0.99999994}
+    - name: Bear L UpperArm
+      parentName: Bear L Clavicle
+      position: {x: -0.29193154, y: 0, z: -0.00000015258789}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1, z: 1}
+    - name: Bear L Forearm
+      parentName: Bear L UpperArm
+      position: {x: -0.33609933, y: -0.000000076293944, z: 0.000000076293944}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1}
+    - name: Bear L Hand
+      parentName: Bear L Forearm
+      position: {x: -0.26445767, y: 0, z: 0.000000076293944}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+      scale: {x: 1, y: 1.0000012, z: 1.0000013}
+    - name: Bear L Finger0
+      parentName: Bear L Hand
+      position: {x: -0.054724883, y: 0.008691406, z: -0.07023344}
+      rotation: {x: 0, y: 0.3826835, z: 0, w: -0.9238795}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.000001}
+    - name: Bear L Finger1
+      parentName: Bear L Hand
+      position: {x: -0.13219985, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1.0000007}
+    - name: Bear Neck
+      parentName: Bear Spine2
+      position: {x: -0.25344223, y: 0.005663719, z: 0.00000003265508}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000004, z: 0.9999999}
+    - name: Bear Head
+      parentName: Bear Neck
+      position: {x: -0.25446913, y: -0.01337059, z: -0.00000014724878}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999976, z: 0.99999964}
+    - name: Eye Left
+      parentName: Bear Head
+      position: {x: -0.20551904, y: 0.34352893, z: -0.1075023}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.8043123, y: 0.804312, z: 0.80431205}
+    - name: Eye Right
+      parentName: Bear Head
+      position: {x: -0.20551899, y: 0.34352866, z: 0.10733967}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.8043123, y: 0.80431205, z: 0.804312}
+    - name: Bear Jaw
+      parentName: Bear Head
+      position: {x: -0.12580337, y: 0.2476115, z: 0.00000033683136}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000007, y: 1.000001, z: 1.0000002}
+    - name: Bear L Lower Mouth
+      parentName: Bear Jaw
+      position: {x: -0.26160857, y: -0.032653503, z: 0.11181939}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000007, z: 1.0000012}
+    - name: Bear R Lower Mouth
+      parentName: Bear Jaw
+      position: {x: -0.26160833, y: -0.032652892, z: -0.11181887}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000006, y: 0.9999994, z: 1.0000001}
+    - name: Bear Tongue
+      parentName: Bear Jaw
+      position: {x: -0.0878656, y: 0.0402034, z: 0.00000008756761}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000008, y: 1.0000019, z: 1.0000012}
+    - name: Bear Tongue02
+      parentName: Bear Tongue
+      position: {x: -0.09547321, y: -0.000058746336, z: -1.6239937e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.99999964}
+    - name: Bear Tongue03
+      parentName: Bear Tongue02
+      position: {x: -0.079335175, y: -0.00004837036, z: -1.3416866e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1.0000002, z: 0.99999964}
+    - name: Bear L Mouth
+      parentName: Bear Head
+      position: {x: -0.07859436, y: 0.323577, z: 0.18844178}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.9999995, z: 1.0000002}
+    - name: Bear L Upper Mouth
+      parentName: Bear Head
+      position: {x: -0.006270447, y: 0.542618, z: 0.142049}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999964, z: 1}
+    - name: Bear L Lower Eyelid
+      parentName: Bear Head
+      position: {x: -0.21128921, y: 0.33491382, z: 0.09034504}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000007, z: 1}
+    - name: Bear Nose
+      parentName: Bear Head
+      position: {x: -0.056329954, y: 0.5381702, z: 0.0000007313186}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000007, y: 1.0000012, z: 1.0000006}
+    - name: Bear L Eyebrow
+      parentName: Bear Head
+      position: {x: -0.27725083, y: 0.4138911, z: 0.06979155}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 1.0000005, z: 1.0000001}
+    - name: Bear L Upper Eyelid
+      parentName: Bear Head
+      position: {x: -0.1832852, y: 0.31745544, z: 0.09429581}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1, z: 1.0000001}
+    - name: Bear L Ear
+      parentName: Bear Head
+      position: {x: -0.28106827, y: 0.03980713, z: 0.16941553}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 0.9999997}
+    - name: Bear R Eyebrow
+      parentName: Bear Head
+      position: {x: -0.27725083, y: 0.41389155, z: -0.06978928}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.000001, y: 1.0000006, z: 1.000001}
+    - name: Bear R Ear
+      parentName: Bear Head
+      position: {x: -0.28106827, y: 0.039808042, z: -0.16941562}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 1.0000001, z: 1}
+    - name: Bear R Mouth
+      parentName: Bear Head
+      position: {x: -0.07859436, y: 0.3235781, z: -0.18844004}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999994, z: 1.0000002}
+    - name: Bear R Upper Mouth
+      parentName: Bear Head
+      position: {x: -0.006270447, y: 0.5426188, z: -0.14204597}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 0.99999964, z: 1.0000001}
+    - name: Bear R Lower Eyelid
+      parentName: Bear Head
+      position: {x: -0.21128921, y: 0.33491427, z: -0.09034318}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.99999976}
+    - name: Bear R Upper Eyelid
+      parentName: Bear Head
+      position: {x: -0.1832852, y: 0.3174559, z: -0.09429406}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.000001, y: 1.0000011, z: 1.0000004}
+    - name: Bear R Clavicle
+      parentName: Bear Spine2
+      position: {x: -0.21267074, y: -0.0007765007, z: -0.062495112}
+      rotation: {x: 0.7071068, y: -0.000000030908623, z: 0.7071068, w: -0.000000030908623}
+      scale: {x: 0.9999999, y: 0.99999994, z: 0.9999998}
+    - name: Bear R UpperArm
+      parentName: Bear R Clavicle
+      position: {x: -0.2919315, y: 0.000000019073486, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000008, y: 1.0000004, z: 1.0000012}
+    - name: Bear R Forearm
+      parentName: Bear R UpperArm
+      position: {x: -0.33609936, y: 0, z: 0.000000076293944}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.000001, y: 1.0000007, z: 1.0000007}
+    - name: Bear R Hand
+      parentName: Bear R Forearm
+      position: {x: -0.2644577, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+      scale: {x: 1.0000005, y: 1.0000012, z: 0.99999976}
+    - name: Bear R Finger0
+      parentName: Bear R Hand
+      position: {x: -0.054724846, y: 0.008691482, z: 0.07023344}
+      rotation: {x: 0, y: 0.38268346, z: 0, w: 0.9238795}
+      scale: {x: 1.0000002, y: 0.99999976, z: 1.0000001}
+    - name: Bear R Finger1
+      parentName: Bear R Hand
+      position: {x: -0.13219982, y: -0.000000076293944, z: -0.000000038146972}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000008, y: 1.0000005, z: 1}
+    - name: Bear Tail
+      parentName: Bear Spine
+      position: {x: 0.0022278593, y: -0.28737393, z: -0.00000039014216}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000002}
+    - name: Bear L Thigh
+      parentName: Bear Pelvis
+      position: {x: 0.0000003814697, y: 0.00000041689762, z: 0.28515735}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 1.0000007, y: 1.0000002, z: 1.0000011}
+    - name: Bear L Calf
+      parentName: Bear L Thigh
+      position: {x: -0.25628287, y: 0, z: 0.000000019073486}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 1.0000001, z: 0.99999976}
+    - name: Bear L Foot
+      parentName: Bear L Calf
+      position: {x: -0.13503963, y: 0.0000000011920929, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000001}
+    - name: Bear L Toe0
+      parentName: Bear L Foot
+      position: {x: -0.07982143, y: 0.13046573, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
+      scale: {x: 1.0000012, y: 1.0000001, z: 1.0000011}
+    - name: Bear R Thigh
+      parentName: Bear Pelvis
+      position: {x: -0.0000003814697, y: -0.00000037401495, z: -0.28515735}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 1.0000008, y: 1.0000008, z: 1.0000015}
+    - name: Bear R Calf
+      parentName: Bear R Thigh
+      position: {x: -0.25628287, y: 0, z: 0.000000019073486}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 0.99999964}
+    - name: Bear R Foot
+      parentName: Bear R Calf
+      position: {x: -0.13503963, y: -0.0000000011920929, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.9999999, z: 1}
+    - name: Bear R Toe0
+      parentName: Bear R Foot
+      position: {x: -0.07982143, y: 0.13046575, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
+      scale: {x: 1.0000007, y: 1.0000001, z: 1.0000006}
+    - name: Bear Mesh
+      parentName: Bear(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 1
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
