@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/arts-env-wof/Scenes/Release/Levels/level_pvp_wof_01_dusk.unity
+    guid: 173205dbe019be741befb8a0594985cd
   m_configObjects: {}
