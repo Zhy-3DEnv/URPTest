@@ -1,0 +1,121 @@
+﻿#pragma kernel CSMain
+
+#include "Packages/com.sofunny.xrenderpipeline/ShaderLibrary/Core.hlsl"
+#include "Packages/com.sofunny.xrenderpipeline/ShaderLibrary/ClusterCommon.hlsl"
+
+StructuredBuffer<ClusterAABB> _Clusters;
+StructuredBuffer<PointLight> _PointLights;
+StructuredBuffer<SpotLight> _SpotLights;
+RWStructuredBuffer<uint> _LightIndexList;
+RWStructuredBuffer<LightGrid> _LightGrids;
+RWStructuredBuffer<uint> _GlobalLightIndexCount;
+
+float4x4 _CameraViewMatrix;
+uint4 _PunctualLightCount; // x: point light, y: spot light
+
+// groupshared PointLight sharedLights[16 * 9 * 4];
+
+bool IsPointLightIntersectWithCluster(in PointLight light, in ClusterAABB aabb) {
+    float4 lightPosWS = float4(light.positionAndRange.xyz, 1.0);
+    float3 lightPosVS = mul(_CameraViewMatrix, lightPosWS).xyz;
+    float lightRange = light.positionAndRange.w;
+    float sqrDistance = 0.0f;
+    for (int i = 0; i < 3; ++i) {
+        float diffMin = aabb.minPt[i] - lightPosVS[i];
+        if (diffMin > 0.0f) {
+            sqrDistance += (diffMin * diffMin);
+        }
+        float diffMax = aabb.maxPt[i] - lightPosVS[i];
+        if (diffMax < 0.0f) {
+            sqrDistance += (diffMax * diffMax);
+        }
+    }
+    return sqrDistance <= (lightRange * lightRange);
+}
+
+// ref: https://bartwronski.com/2017/04/13/cull-that-cone/
+// TODO: faster way to calculate cone-aabb/sphere culling?
+bool IsSpotLightIntersectWithCluster(in SpotLight light, in ClusterAABB aabb) {
+    float4 lightPosWS = float4(light.positionAndRange.xyz, 1.0);
+    float3 lightPosVS = mul(_CameraViewMatrix, lightPosWS).xyz;
+    float lightRange = light.positionAndRange.w;
+    // NOTE: spotDir is reverted for calculating spot angle attenuation, we need to revert it again to get correct spot light direction 
+    float4 lightDirWS = float4(-light.spotDirAndAngle.xyz, 0.0);
+    float3 lightDirVS = normalize(mul(_CameraViewMatrix, lightDirWS).xyz);
+    // get bounding sphere from cluster aabb for spot light culling
+    float4 clusterSphere;
+    clusterSphere.xyz = (aabb.minPt.xyz + aabb.maxPt.xyz) / 2; // sphere center
+    clusterSphere.w = length((aabb.maxPt.xyz - aabb.minPt.xyz) / 2); // sphere radius
+
+    float3 v = clusterSphere.xyz - lightPosVS;
+    float vLenSqr = dot(v, v);
+    float v1Len = dot(v, lightDirVS);
+    float angle = light.spotDirAndAngle.w;
+    float closestPointDistance = cos(angle) * sqrt(vLenSqr - v1Len * v1Len) - v1Len * sin(angle);
+    bool angleCull = closestPointDistance > clusterSphere.w;
+    bool frontCull = v1Len > (clusterSphere.w + lightRange);
+    bool backCull = -v1Len > clusterSphere.w;
+    return !(angleCull || frontCull || backCull);
+}
+
+// for gles 3.x, implementation must support at least 128 threads in a work group. exceed this limit will cause crash on some devices
+[numthreads(16, 8, 1)]
+void CSMain (uint3 groupID : SV_GroupID, uint groupThreadIndex : SV_GroupIndex, uint3 groupThreadID : SV_GroupThreadID) {
+    uint groupThreadCount = 16 * 8 * 1;
+    uint clusterIdx = groupThreadIndex + groupThreadCount * groupID.z;
+    // NOTE: since each cluster need to test against every lights, we separate these tests into multiple batches for using groupshared lights,
+    // batch size is same as groupThreadCount so we can iterate over sharedLights by groupThreadIndex.
+    // uint batchCount = (_PointLightCount + groupThreadCount - 1) / groupThreadCount;
+    // thread local variables
+    uint localVisibleLightCount = 0;
+    uint localVisibleLightIndices[MAX_VISIBLE_LIGHTS_PER_CLUSTER];
+
+    // for (uint batchIdx = 0; batchIdx < batchCount; ++batchIdx) {
+    //     uint lightIdx = batchIdx * groupThreadCount + groupThreadIndex;
+    //     lightIdx = min(_PointLightCount, lightIdx);
+    //     sharedLights[groupThreadIndex] = _PointLights[lightIdx];
+
+    //     GroupMemoryBarrierWithGroupSync();
+
+    //     for (uint sharedLightIdx = 0; sharedLightIdx < groupThreadCount; ++sharedLightIdx) {
+    //         PointLight light = sharedLights[sharedLightIdx];
+    //         ClusterAABB aabb = _Clusters[clusterIdx];
+    //         if (IsPointLightIntersectWithCluster(light, aabb)) {
+    //             localVisibleLightIndices[localVisibleLightCount] = batchIdx * groupThreadCount + sharedLightIdx;
+    //             localVisibleLightCount++;
+    //         }
+    //     }
+    // }
+    // GroupMemoryBarrierWithGroupSync();
+
+    // non groupshared lights version
+    ClusterAABB aabb = _Clusters[clusterIdx];
+    for (uint lightIdx = 0; lightIdx < _PunctualLightCount.x; ++lightIdx) {
+       PointLight light = _PointLights[lightIdx];
+       if (IsPointLightIntersectWithCluster(light, aabb)) {
+           localVisibleLightIndices[localVisibleLightCount] = lightIdx;
+           localVisibleLightCount++;
+       }
+    }
+
+    uint localVisibleSpotLightCount = 0;
+    for (uint lightIdx = 0; lightIdx < _PunctualLightCount.y; ++lightIdx) {
+       SpotLight light = _SpotLights[lightIdx];
+       if (IsSpotLightIntersectWithCluster(light, aabb)) {
+           localVisibleLightIndices[localVisibleLightCount] = lightIdx;
+           localVisibleLightCount++;
+           localVisibleSpotLightCount++;
+       }
+    }
+
+    uint prevGlobalLightOffset;
+    InterlockedAdd(_GlobalLightIndexCount[0], localVisibleLightCount, prevGlobalLightOffset);
+    for (uint i = 0; i < localVisibleLightCount; ++i) {
+        _LightIndexList[prevGlobalLightOffset + i] = localVisibleLightIndices[i];
+    }
+
+    uint pointLightCount = localVisibleLightCount - localVisibleSpotLightCount;
+    uint lightCount = (localVisibleSpotLightCount << 16) | pointLightCount;
+    _LightGrids[clusterIdx].offset = prevGlobalLightOffset;
+    _LightGrids[clusterIdx].count = lightCount;
+}

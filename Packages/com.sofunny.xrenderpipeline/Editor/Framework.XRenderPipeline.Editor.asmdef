@@ -1,0 +1,17 @@
+{
+    "name": "Framework.XRenderPipeline.Editor",
+    "references": [
+        "GUID:cb45eee84b428ae4bbf193626dc54eca"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

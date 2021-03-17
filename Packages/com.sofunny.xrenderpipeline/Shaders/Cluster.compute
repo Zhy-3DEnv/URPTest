@@ -1,0 +1,52 @@
+﻿#pragma kernel CSMain
+
+#include "Packages/com.sofunny.xrenderpipeline/ShaderLibrary/Core.hlsl"
+#include "Packages/com.sofunny.xrenderpipeline/ShaderLibrary/ClusterCommon.hlsl"
+
+RWStructuredBuffer<ClusterAABB> _Clusters;
+float4x4 _CameraInvProjMatrix;
+uint4 _ClusterDimensions;
+uint4 _TileSize;
+// near: _ProjectionParams.y, far: _ProjectionParams.z
+// screen width: _ScreenParams.x, screen height: _ScreenParams.y
+
+// creates a line from eye to screen point, calc its intersection with z-oriented plane located at a given distance to the origin
+float3 ComputeLineZPlaneIntersection(float3 startPt, float3 endPt, float zDistance) {
+    const float3 normal = { 0.0, 0.0, 1.0 };
+    float3 vec = endPt - startPt;
+    float t = (zDistance - dot(normal, startPt)) / dot(normal, vec);
+    return startPt + t * vec;
+}
+
+float3 ScreenToViewSpace(float4 screenPos, float4x4 invProj) {
+    float2 screenUV = screenPos.xy / _ScreenParams.xy;
+    float4 clipPos = float4(screenUV * 2.0 - 1.0, screenPos.z, screenPos.w);
+    float4 viewPos = mul(invProj, clipPos);
+    // perspective projection
+    return viewPos.xyz / viewPos.w;
+}
+
+[numthreads(1, 1, 1)]
+void CSMain(uint3 groupID : SV_GroupID) {
+    const float3 eye = {0, 0, 0};
+    uint clusterIdx = groupID.x + groupID.y * _ClusterDimensions.x + groupID.z * (_ClusterDimensions.x * _ClusterDimensions.y);
+    // calc screen-space min and max points
+    float4 minPtSS = float4(float2(groupID.x, groupID.y) * _TileSize.xy, -1.0, 1.0);
+    float4 maxPtSS = float4(float2(groupID.x + 1, groupID.y + 1) * _TileSize.xy, -1.0, 1.0);
+    // calc view-space min and max points
+    float3 minPtVS = ScreenToViewSpace(minPtSS, _CameraInvProjMatrix).xyz;
+    float3 maxPtVS = ScreenToViewSpace(maxPtSS, _CameraInvProjMatrix).xyz;
+    // calc near and far values of the cluster in view space
+    float clusterNear = -_ProjectionParams.y * pow(_ProjectionParams.z / _ProjectionParams.y, groupID.z / float(_ClusterDimensions.z));
+    float clusterFar  = -_ProjectionParams.y * pow(_ProjectionParams.z / _ProjectionParams.y, (groupID.z + 1) / float(_ClusterDimensions.z));
+
+    float3 minPtNear = ComputeLineZPlaneIntersection(eye, minPtVS, clusterNear);
+    float3 minPtFar  = ComputeLineZPlaneIntersection(eye, minPtVS, clusterFar);
+    float3 maxPtNear = ComputeLineZPlaneIntersection(eye, maxPtVS, clusterNear);
+    float3 maxPtFar  = ComputeLineZPlaneIntersection(eye, maxPtVS, clusterFar);
+
+    float3 minPtAABB = min(min(minPtNear, minPtFar), min(maxPtNear, maxPtFar));
+    float3 maxPtAABB = max(max(minPtNear, minPtFar), max(maxPtNear, maxPtFar));
+    _Clusters[clusterIdx].minPt = float4(minPtAABB, 1);
+    _Clusters[clusterIdx].maxPt = float4(maxPtAABB, 1);
+}

@@ -1,0 +1,15 @@
+{
+  "name": "com.sofunny.xrenderpipeline",
+  "description": "X render pipeline is a custom scriptable render pipeline targeting mobile platforms",
+  "version": "0.3.0",
+  "unity": "2020.1",
+  "displayName": "X RenderPipeline",
+  "dependencies": {
+    "com.unity.jobs": "0.7.0-preview.17"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.sofunny.io/framework/xrp.git",
+    "revision": "c60e3e210eacb23b19a6c07a5ba0f4bc2c09eedc"
+  }
+}
