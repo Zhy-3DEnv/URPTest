@@ -18,14 +18,14 @@ MonoBehaviour:
   transparentLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  requireOpaqueTexture: 1
+  requireOpaqueTexture: 0
   requireDepthTexture: 1
   opaqueDownsampling: 1
   useHDR: 0
   msaaQuality: 1
   renderScale: 1
   supportMainLightShadow: 1
-  supportSoftShadow: 1
+  supportSoftShadow: 0
   shadowDistance: 50
   shadowmapResolution: 1024
   shadowDepthBias: 1
